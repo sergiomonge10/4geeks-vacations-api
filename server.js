@@ -13,10 +13,6 @@ mongoose.connect('mongodb://root:root@ds259865.mlab.com:59865/4geeks-vacations',
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(function(req, res) {
-  res.status(404).send({url: req.originalUrl + ' not found pretty formated'})
-});
-
 var routes = require('./api/routes/userRoutes');
 routes(app);
 

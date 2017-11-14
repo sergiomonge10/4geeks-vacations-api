@@ -14,6 +14,10 @@ var UserSchema = new Schema({
   Created_date: {
     type: Date,
     default: Date.now
+  },
+  vacations: {
+    type: Number,
+    default: 0
   }
 });
 
